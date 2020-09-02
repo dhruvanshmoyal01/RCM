@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<!---------------------------------------- Required meta tags ------------------------------------>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-------------------------------------------Custom css link------------------------------------>
+	{% block customcss %}{% endblock customcss %}    	
+<!----------------------------------------Font awesome cdn link----------------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"/>
+<!------------------------------------------ Bootstrap CSS --------------------------------------->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-------------------------------------------tailwind css link------------------------------------>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<!------------------------------------------------tittle------------------------------------------>
+	<title>Rotaract Club Mhow</title>
+</head>
+<body>
+<!------------------------------------------- Navigation bar ------------------------------------->
+
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light">
+		  <img src="{% static 'projects/images/logo.jpg' %}" width="60px" width="60px">
+		  <span class="ml-3 text-xl">Rotaract Club Mhow</span>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ml-lg-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="{% url 'home-page' %}">Home</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="{% url 'our-projects' %}">Projects</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="{% url 'our-team' %}">Our-team</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdi5q-Fv8FrgNDBVTxF0YlsLp-lRBSSUliT3-FBC6T6zjip6A/viewform?usp=sf_link">Join</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+	</header>
+{% block content %}{% endblock content %}
+<!------------------------------------------- footer section ------------------------------------->
+	<footer class="text-gray-700 body-font">
+	  <div class="container-fluid padding">
+			<div class="row text-center padding">
+				<div class="col-12">
+					<h2 class="display-4">Connect With Us</h2>
+				</div>
+				<div class="col-12 col-xs-12 social padding">
+					<a href="https://www.facebook.com/rotaractclubofmhowcommunity/"><i class="fa fa-facebook-square"></i></a>
+					<a href="https://www.linkedin.com/company/rotaract-club-of-mhow-community"><i class="fa fa-linkedin"></i></a>
+					<a href="https://instagram.com/rotaract_club_mhow?igshid=a6jgl7smgkq2"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.youtube.com/channel/UCYy2g6b_K9-us3tXEIreQbw"><i class="fa fa-youtube"></i></a>
+					<a href="mailto:rotaractclubofmhowcommunity@gmail.com"><i class="fa fa-envelope"></i></a>
+				</div>
+			</div>
+		</div>
+	  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+	    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+	      <img src="{% static 'projects/images/logo-name.jpg' %}" id="logoImg" width="25%" height="50%">
+	    </a>
+	    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Rotaract Club Mhow Community</p>
+	  </div>
+	</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--  Isotope min js --> 
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<!--  Custom js -->
+	<script src="{% static 'projects/main.js' %}"></script>
+
+</body>
+</html>

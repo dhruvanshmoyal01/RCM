@@ -1,0 +1,36 @@
+{% extends "projects/base.html" %}
+{% load static %}
+    	
+{% block customcss %}
+	<link rel="stylesheet" type="text/css" href="{% static 'projects/gallery-style.css' %}">
+{% endblock customcss %}
+{% block content %}	
+<!------------------------------------------------ picture ------------------------------------------>
+	<div class="container-fluid">
+		<h1 class="display-4 text-center">A Glimpse of US</h1>
+		<div class="row">
+			<div class="column">
+				<img src="{% static 'projects/images/gallery/51.jpg' %}">
+				<img src="{% static 'projects/images/gallery/IMG-20191020-WA0012.jpg' %}">
+				<img src="{% static 'projects/images/gallery/91.jpg' %}">
+				<img src="{% static 'projects/images/gallery/2020-08-04 (1).png' %}">
+				<img src="{% static 'projects/images/gallery/IMG-20191020-WA0078.jpg' %}">
+			</div>
+			<div class="column">
+				<img src="{% static 'projects/images/gallery/36.jpg' %}">
+				<img src="{% static 'projects/images/gallery/IMG-20200227-WA0050.jpg' %}">
+				<img src="{% static 'projects/images/gallery/IMG-20200308-WA0019.jpg' %}">
+				<img src="{% static 'projects/images/gallery/IMG-20200213-WA0002' %}.jpg">
+				<img src="{% static 'projects/images/gallery/IMG-20191124-WA0001' %}.jpg">
+				<img src="{% static 'projects/images/gallery/IMG-20200201-WA0037' %}.jpg">
+			</div>
+			<div class="column">
+				<img src="{% static 'projects/images/gallery/IMG-20200321-WA0012.jpg' %}">
+				<img src="{% static 'projects/images/gallery/IMG-20200319-WA0002.jpg' %}">
+				<img src="{% static 'projects/images/gallery/IMG-20200321-WA0023.jpg' %}">
+				<img src="{% static 'projects/images/gallery/IMG_20200515_150807.jpg' %}">
+				<img src="{% static 'projects/images/gallery/IMG_20200201_144326.jpg' %}">
+			</div>
+		</div>
+	</div>	
+{% endblock content %}

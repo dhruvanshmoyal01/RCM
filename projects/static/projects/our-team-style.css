@@ -1,0 +1,155 @@
+/*------------------------------------------- Navigation bar -------------------------------------*/
+header{
+	position: relative;
+	z-index: 10;
+	width: 100%;
+}
+
+.navbar{
+	padding: 20px 0; 
+}
+
+.navbar-brand{
+	text-transform: uppercase;
+	font-size: 2em;
+	color: #262626;
+}
+
+.nav-item{
+	text-transform: uppercase; 
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+	background: #3b5998;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link{
+	color: #262626;
+	padding: 5px 15px;
+	margin: 0 5px;
+}
+/*------------------------------------------- Main section -------------------------------------*/
+
+/*------------------------------------------- Bod section -------------------------------------*/
+.card{
+	margin: 15px 10px!important;
+}
+.card img{
+	height: 200px;
+	width: 200px;
+	margin: auto;
+}
+
+.popup{
+ transition: transform .2s; 
+}
+
+.popup:hover {
+     transform: scale(1.1); 
+		box-shadow: 10px 5px 5px -3px rgba(92,92,92,0.4), 0px 7px 10px rgba(92,92,92,0.6), -10px 5px 5px -3px rgba(92,92,92,0.4);
+		
+		}
+.flip-box{
+	position: relative;
+	perspective: 1000px;
+}
+
+.flip-box-inner{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d; 
+	transition: all 0.8s ease;
+}
+
+.flip-box-inner:hover{
+	transform: rotateY(180deg);	
+}
+
+.flip-box-front{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.flip-box-back{
+	position: absolute;
+		top:10px;
+	width: 100%;
+	height: 100%;
+   !important:vertical-align: top;
+backface-visibility: hidden;
+	transform: rotateY(180deg);
+}
+
+
+
+/*------------------------------------------- Rotaractor section -------------------------------------*/
+.all_members{
+	margin-top: 20px;
+}
+
+.rotaractor{
+	margin: 40px 0; 
+}
+
+.rotaractor img{
+	height: 400px;
+	width: 400px;
+	margin: auto;	
+}
+
+/*------------------------------------------- End Main section -------------------------------------*/
+
+/* -------------------------------------------  footer section  ------------------------------------------- */
+.social a{
+	font-size: 4em;
+	padding: 2rem;
+}
+
+.fa-facebook-square{
+	color: #3b5998;
+}
+
+.fa-envelope{
+	color: #D44638; 
+}
+
+.fa-linkedin{
+	color: #0e76a8;
+}
+
+.fa-instagram{
+	color: #405DE6;
+}
+
+.fa-youtube{
+	color: #bb0000;
+}
+
+.fa-facebook-square:hover, .fa-instagram:hover , .fa-youtube:hover, .fa-envelope:hover, .fa-linkedin:hover{
+	color: #d5d5d5;
+}
+
+
+/*----------------------------------------------media queries------------------------------------------------*/
+@media(max-width: 576px){
+	.logo img{
+		margin-left: 30%;
+	}
+	.rotaractor div{
+		margin: 10px;
+	}
+	#logoImg{
+	  	width: 75%;
+	  	height: 100%;
+	}
+	.social a{
+		font-size: 2em;
+		padding: 1rem;
+	}  
+}

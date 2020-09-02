@@ -1,0 +1,125 @@
+/*------------------------------------------- Navigation bar -------------------------------------*/
+header{
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.navbar{
+  padding: 20px 0; 
+}
+
+.navbar-brand{
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #262626;
+}
+
+.nav-item{
+  text-transform: uppercase; 
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+  background: #3b5998;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link{
+  color: #262626;
+  padding: 5px 15px;
+  margin: 0 5px;
+}
+
+/*------------------------------------------- Main section -------------------------------------*/
+#our-project{
+    font-family: American Typewriter, serif;
+    text-shadow: var(--shadow) 2px 2px;
+    font-size: 80px;
+}
+
+#event-title{
+    font-family: Palatino, URW Palladio L, serif;
+    text-shadow: var(--shadow) 2px 2px;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.project-report{
+  padding-bottom: 60px!important;
+  font-family: Palatino, URW Palladio L, serif;
+}
+
+.project-sub{
+  padding-top: 10px;
+  padding-bottom: 5px!important;
+}
+
+:root {
+    --border-size: 0.125rem;
+    --duration: 250ms;
+    --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --font-family: monospace;
+    --color-primary: white;
+    --color-secondary: #3b5998;
+    --color-tertiary: dodgerblue;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --space: 1rem;
+  }
+
+.project-display button{
+  width: 125px!important;
+  border: none!important; 
+}
+
+/* -------------------------------------------  footer section  ------------------------------------------- */
+.social a{
+  font-size: 4em;
+  padding: 2rem;
+}
+
+.fa-facebook-square{
+  color: #3b5998;
+}
+
+.fa-envelope{
+  color: #D44638; 
+}
+
+.fa-linkedin{
+  color: #0e76a8;
+}
+
+.fa-instagram{
+  color: #405DE6;
+}
+
+.fa-youtube{
+  color: #bb0000;
+}
+
+.fa-facebook-square:hover, .fa-instagram:hover , .fa-youtube:hover, .fa-envelope:hover, .fa-linkedin:hover{
+  color: #d5d5d5;
+}
+
+/*----------------------------------------------media queries------------------------------------------------*/
+@media(max-width: 576px){
+  .button-group button{
+    position: relative;
+    border-radius: 10px!important;
+    padding: 10px;
+  }
+  
+  #logoImg{
+    width: 75%;
+    height: 100%;
+  }
+  
+  .social a{
+    font-size: 2em;
+    padding: 1rem;
+  }    
+}

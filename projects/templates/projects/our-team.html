@@ -1,0 +1,89 @@
+{% extends "projects/base.html" %}
+{% load static %}
+    	
+{% block customcss %}
+	<link rel="stylesheet" type="text/css" href="{% static 'projects/our-team-style.css' %}">
+{% endblock customcss %}
+{% block content %}	
+<!-------------------------------------------  Main section  ------------------------------------->
+	<main class="site-main">
+		<!------------------------------------------- Bod section ------------------------------------->
+		<section class="bod">
+			<div class="container">
+				<div class="row">
+					<div class="bod-header col-lg-12">
+						<h1 class="display-4 text-center">Board Of Directors <span class="tenure">2020-21</span></h1>
+					</div>
+				</div>
+				<div class="row">
+					{% for member in members %}
+						{% if member.title != 'rotaractor' %}
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="popup">
+									<div class="card">
+										<div class="card-body text-center">
+           						<div class="flip-box">
+												<div class="flip-box-inner">
+													<div class="flip-box-front">
+												  <img class="card-img-top" src="{{ member.image.url }}" alt="Card image cap">
+													</div>
+													<div class="flip-box-back">
+													<p>{{ member.quote }}</p>
+													</div>
+												</div>
+											</div>
+											<h5 class="card-title text-center">{{ member.name }}</h5>
+									    <h5 class="card-title text-center">{{ member.title }}</h5>
+									    <a href="{{ member.fb_profile }}" class="btn btn-primary text-center">Fb Profile</a>
+									    <a href="{{ member.insta_profile }}" class="btn btn-primary text-center">Insta Profile</a>
+										</div>
+									</div>
+                </div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		<!------------------------------------------- Rotaractor section ------------------------------------->
+		<section class="all_members">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 m-auto logo">
+						<img src="{% static 'projects/images/logo.jpg' %}" width="150px" height="150px">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<h1 class="display-4 text-center">Humans Behind Rotaract</h1>
+					</div>
+				</div> 
+				{% for member in members %}
+					{% if forloop.counter|divisibleby:2 %}
+						<div class="row rotaractor">
+							<div class="col-lg-8">
+								<h4 class="display-4">{{ member.name }}</h4>
+								<p>{{ member.info }}</p>
+							</div>
+							<div class="col-lg-4">
+								<img src="{{ member.image.url }}" class="rounded-circle" alt="Rotaractor Img">
+							</div>
+						</div>
+						<hr class="light">
+					{% else %}
+						<div class="row rotaractor">
+							<div class="col-lg-4">
+								<img src="{{ member.image.url }}" class="rounded-circle" alt="Rotaractor Img">
+							</div>
+							<div class="col-lg-8">
+								<h4 class="display-4">{{ member.name }}</h4>
+								<p>{{ member.info }}</p>
+							</div>
+						</div>
+						<hr class="light">
+					{% endif %}
+				{% endfor %}
+			</div>
+		</section>	
+	</main>
+{% endblock content %}
