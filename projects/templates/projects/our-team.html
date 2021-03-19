@@ -19,10 +19,10 @@
 					{% for member in members %}
 						{% if member.title != 'rotaractor' %}
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="popup">
+                				<div class="popup">
 									<div class="card">
 										<div class="card-body text-center">
-           						<div class="flip-box">
+           									<div class="flip-box">
 												<div class="flip-box-inner">
 													<div class="flip-box-front">
 												  <img class="card-img-top" src="{{ member.image.url }}" alt="Card image cap">
@@ -38,7 +38,7 @@
 									    <a href="{{ member.insta_profile }}" class="btn btn-primary text-center">Insta Profile</a>
 										</div>
 									</div>
-                </div>
+                				</div>
 							</div>
 						{% endif %}
 					{% endfor %}
